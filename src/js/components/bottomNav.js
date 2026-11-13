@@ -1,0 +1,2 @@
+const ITEMS=[['dashboard','▦','Home'],['subjects','▤','Subjects'],['tasks','☑','Tasks'],['planner','◷','Planner'],['exams','▣','Exams']];
+export function renderBottomNav(active){document.querySelector('#bottom-nav').innerHTML=ITEMS.map(([id,icon,label])=>`<a class="nav-link ${active===id?'active':''}" href="#/${id}" data-route="${id}"><span class="nav-icon">${icon}</span><span>${label}</span></a>`).join('');}
