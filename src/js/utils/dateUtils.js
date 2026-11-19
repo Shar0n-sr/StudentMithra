@@ -1,5 +1,0 @@
-export const todayISO=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
-export const formatDate=(value)=>{if(!value)return '—';const mode=globalThis.document?.documentElement?.dataset?.dateFormat||'medium';const options=mode==='long'?{day:'numeric',month:'long',year:'numeric'}:mode==='short'?{day:'2-digit',month:'2-digit',year:'2-digit'}:{day:'numeric',month:'short',year:'numeric'};return new Intl.DateTimeFormat(undefined,options).format(new Date(`${value}T00:00:00`));};
-export const daysUntil=value=>Math.ceil((new Date(`${value}T00:00:00`).getTime()-new Date(`${todayISO()}T00:00:00`).getTime())/86400000);
-export const minutesLabel=value=>{const n=Number(value)||0;return `${Math.floor(n/60)}h ${n%60}m`;};
-export const currentWeekDates=(weekStartsOn=1)=>{const now=new Date(),day=(now.getDay()-weekStartsOn+7)%7;const start=new Date(now);start.setDate(now.getDate()-day);return Array.from({length:7},(_,i)=>{const d=new Date(start);d.setDate(start.getDate()+i);return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;});};
