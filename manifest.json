@@ -1,0 +1,12 @@
+{
+  "id": "./",
+  "name": "StudentMithra — Academic Productivity",
+  "short_name": "StudentMithra",
+  "description": "Your academic life, under control.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F5F7FB",
+  "theme_color": "#4267D5",
+  "icons": [{"src":"assets/icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},{"src":"assets/icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"},{"src":"assets/icons/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+}
